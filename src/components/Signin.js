@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 class Signin extends React.Component {
 
     handleSubmit(e) {
@@ -27,9 +28,9 @@ render() {
                   <br />
                   <br />
                   <center>
-                  <div className="btn-group" role="group" aria-label="">
-                        <button type="button" className="btn btn-primary btn-link"><NavLink to="/" activeClassName="is-active" exact>SignUp</NavLink></button>
-                        <button type="button" className="btn btn-secondary btn-link"><NavLink to="/sign-in" activeClassName="is-active" exact>SignIn</NavLink> </button>
+                  <div className="btn-group  text-center" id="btn-grp" role="group" aria-label="">
+                    <button className="sign_button"><NavLink to="/">SignUp</NavLink></button>
+                    <button className="sign_button"><NavLink to="/sign-in" >SignIn</NavLink> </button>
                   </div>
                   </center>
               </div>
