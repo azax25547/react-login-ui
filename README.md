@@ -1,5 +1,5 @@
 
-React-LogIn-Ui-App
+## React-LogIn-Ui-App
 
 This project is build with ```create-react-app```
 
@@ -13,7 +13,7 @@ https://musing-murdock-4503cc.netlify.com/
 - You are allowed to make pull requests that break the rules ;)
 - Styling / code can be pretty, ugly or stupid, big or small as long as it works
 
-## Getting Started
+# Getting Started
 
 - Fork this repo (button on top)
 - Clone on your local machine
