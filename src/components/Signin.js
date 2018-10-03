@@ -1,65 +1,42 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-class Signin extends React.Component {
-
-    handleSubmit(e) {
-        alert("Logged In Succesfully");
-        e.preventDefault();
-    }
-render() {
-
-    return(
-        <div>
-        <div className="__body">
-        <div className="container">
-          <div className="container">
-            <div className="wrapper">
-              <div className="info">
-                <h3>Physics Society</h3>
-                <p className="lead small">
-                  A part of Bhadrak Autonomus College
-                </p>
-                <ul>
-                  <li>Jagannathpur</li>
-                  <li>06784-456372</li>
-                  <li>bhadrakcollege@hotamil.com</li>
-                </ul>
-                  <br />
-                  <br />
-                  <center>
-                  <div className="btn-group" role="group" aria-label="">
-                        <button type="button" className="btn btn-primary btn-link"><NavLink to="/" activeClassName="is-active" exact>SignUp</NavLink></button>
-                        <button type="button" className="btn btn-secondary btn-link"><NavLink to="/sign-in" activeClassName="is-active" exact>SignIn</NavLink> </button>
-                  </div>
-                  </center>
-              </div>
-              <div className="contact">
-                <h3>Sign In</h3>
-                <form action="" onSubmit={this.handleSubmit.bind(this)}>
-                  <p>
-                    <label htmlFor="">Email</label>
-                    <input type="email" name="name" required />
-                  </p>
-                  <p>
-                  <label htmlFor="">Password</label>
-                  <input type="password" name="name" required/>
-                </p>
-                <p></p>
-                <p>
-                <NavLink to="/forgot" activeClassName="is-active" className="text-danger" exact>Forgot your Password</NavLink>
-                </p>
-                  <p className="full">
-                    <button type="submit">Submit</button>
-                  </p>
-                </form>
-              </div>
+import style from '../css/Sign.css';
+export class SignIn extends React.Component {
+    render() {
+        return(
+            <div>
+                <div className={style.main}>
+                    <div className={style.loginHead}>
+                        Login
+                    </div>
+                    <form onSubmit={this.props.submitMethod}>
+                        <div className={style.frRow}>
+                            <div className="col-12">
+                                <input className={style.fc} type="email" id="email-input" placeholder="Email" required/>
+                            </div>
+                        </div>
+                        <div className={style.frRow}>
+                            <div className="col-12">
+                                <input className={style.fc} type="password" id="password-input" placeholder="Password" required/>
+                            </div>
+                        </div>
+                        <div className={style.fcRow}>
+                          <label className="form-check-label">
+                                <input type="checkbox" className="form-check-input"/>
+                                Remember me
+                          </label>
+                        </div>
+                        <div className={style.btnRow}>
+                            <button type="submit" className={style.btn}> Enter</button>
+                        </div>
+                        <div className={style.forgot} onClick={() => this.props.switch("forgot")}>
+                            Forgot your password?
+                        </div>
+                    </form>
+                </div>
+                <div className={style.create} onClick={() => this.props.switch("signUp")}>
+                    Create an Account
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-        </div>
-    )
+        )
+    }
 }
-}
-
-export default Signin;
