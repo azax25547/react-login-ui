@@ -22,15 +22,25 @@ render() {
                 <ul>
                   <li>Jagannathpur</li>
                   <li>06784-456372</li>
-                  <li>bhadrakcollege@hotamil.com</li>
+                  <li>bhadrakcollege@hotmail.com</li>
                 </ul>
                   <br />
                   <br />
                   <center>
-                  <div className="btn-group" role="group" aria-label="">
-                        <button type="button" className="btn btn-primary btn-link"><NavLink to="/" activeClassName="is-active" exact>SignUp</NavLink></button>
-                        <button type="button" className="btn btn-secondary btn-link"><NavLink to="/sign-in" activeClassName="is-active" exact>SignIn</NavLink> </button>
-                  </div>
+                    <div className="btn-group" role="group" aria-label="">
+
+
+                      <div className="link-signup">
+                            <NavLink to="/" activeClassName="is-active" exact>Sign Up&emsp;</NavLink>
+                      </div>
+
+                      <div className="link-signin">
+                            <NavLink to="/sign-in" activeClassName="is-active" exact>Sign In&emsp;</NavLink>
+                      </div>
+
+
+
+                    </div>
                   </center>
               </div>
               <div className="contact">

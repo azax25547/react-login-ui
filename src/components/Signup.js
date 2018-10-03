@@ -32,9 +32,16 @@ class SignUp extends Component {
                   <br />
                   <br />
                   <center>
-                  <div className="btn-group  text-center" id="btn-grp" role="group" aria-label="">
-                        <button type="button" className="btn btn-primary btn-link"><NavLink to="/" activeClassName="is-active" exact>SignUp</NavLink></button>
-                        <button type="button" className="btn btn-secondary btn-link"><NavLink to="/sign-in" activeClassName="is-active" exact>SignIn</NavLink> </button>
+                  <div className="btn-group text-center" id="btn-grp" role="group" aria-label="">
+
+                  <div className="link-signup">
+                        <NavLink to="/" activeClassName="is-active" exact>Sign Up&emsp;</NavLink>
+                  </div>
+
+                  <div className="link-signin">
+                        <NavLink to="/sign-in" activeClassName="is-active" exact>Sign In&emsp;</NavLink>
+                  </div>
+
                   </div>
                   </center>
               </div>
@@ -53,12 +60,12 @@ class SignUp extends Component {
                     <label htmlFor="">Email</label>
                     <input type="email" name="Email" required/>
                   </p>
-    
+
                   <p>
                     <label htmlFor="">Password</label>
                     <input type="password" name="name" required/>
                   </p>
-               
+
                   <p className="full">
                     <button type="submit">Submit</button>
                   </p>
