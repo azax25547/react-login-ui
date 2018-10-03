@@ -13,10 +13,10 @@ class App extends Component {
       <Router>
       <div className="App">
       <Switch>
-      <Route path="/" exact component={SignUp} />
-      <Route path="/sign-in" exact component={Signin} />
-      <Route path="/forgot" exact component={Forgot} />
-      <Route  component={NotFound} />
+        <Route path="/" exact component={SignUp} />
+        <Route path="/sign-in" exact component={Signin} />
+        <Route path="/forgot" exact component={Forgot} />
+        <Route  component={NotFound} />
       </Switch>
       </div>
     </Router>
