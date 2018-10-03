@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import SignUp from './components/Signup';
-import Signin from './components/Signin';
-import Forgot from './components/forgot';
+import {Landing} from './components/Landing'
 import NotFound from './components/notFound';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
 
 class App extends Component {
@@ -13,9 +11,8 @@ class App extends Component {
       <Router>
       <div className="App">
       <Switch>
-      <Route path="/" exact component={SignUp} />
-      <Route path="/sign-in" exact component={Signin} />
-      <Route path="/forgot" exact component={Forgot} />
+      <Route path="/" exact component={Landing} />
+      <Route path="/sign-in" exact component={Landing} />
       <Route  component={NotFound} />
       </Switch>
       </div>
