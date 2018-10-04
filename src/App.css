@@ -1,6 +1,7 @@
 *{
   box-sizing: border-box;
 }
+
   a {
    text-decoration: none!important;
  }
@@ -89,10 +90,12 @@ ul{
 .contact form button, .contact form input, .contact form textarea{
   width:100%;
   padding:1em;
+  cursor: pointer;
 }
 .contact form button{
-  background: #c9e6ff;
+  background: #50B0DD;
    border:0;
+   transition: background-color 2s ease-in-out;
    border-radius: 50px;
   }
  input[type="text"],input[type="email"],input[type="password"] {
@@ -103,7 +106,11 @@ ul{
 .contact form button:hover, .contact form button:focus {
   box-shadow: 0 0 20px 0 #c4c4c4;
   outline:0;
-  transition: background-color 2s ease-in-out;
+  transform: translateY(-2px);
+}
+
+.contact form button:active{
+  transform: translateY(0);
 }
 
 @media(min-width:700px){
